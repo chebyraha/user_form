@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userAcount</title>
+    <link rel="stylesheet" href="/css/userAcount_style.css">
+</head>
+<body>
+
+
+
+
+<div class="conteiner">
+    <div class="containerMain">
+        <div class="containerMain_imgLogo">
+            <a href="/" target="_blank">
+                <img src="/img/logo-social.png" alt="logo">
+            </a>
+        </div>
+        <div class="containerMain_text">
+            <h1>Уважаемый покупатель,
+                <p>
+                    благодорим Вас за покупку!
+                </p>
+            </h1>
+            <h2>Заполнив данную анкету, Вы подтверждаете свое согласие на участие в Программе лояльности,получение информации об акциях, новинках, мероприятиях по email-рассылке </h2>
+        </div>
+        <div class="form">
+            <form id="form" action="./mail.php" method="POST" novalidate="novalidate" class="form__Body">
+                <div class="containerMain_form">
+                    <div class="containerMain_form form_main">
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req" type="text" id="lastname" name="lastname" placeholder="Фамалия*" required="">
+                            <label class="textField__label" for="lastname">Фамилия*</label>
+                            
+                        </div>
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req" type="text" id="firstname" name="firstname" placeholder="Имя*" required="">
+                            <label class="textField__label" for="name">Имя*</label>
+                            
+                        </div>
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req" type="text" id="secondname" name="secondname" placeholder="Отчество*" required="">
+                            <label class="textField__label" for="name">Отчество*</label>
+                            
+                        </div>
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req" type="date" id="date" name="date" value="dd-mm-yyyy" max="" required="">
+                            <label class="textField__label" for="date">Дата рождения*</label>
+                        
+                        </div>
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req" type="tel" id="tel" name="mtel" placeholder="Контактный номер*" required="">
+                            <label class="textField__label" for="tel">Контактный номер*</label>
+                            
+                        </div>
+                        <div class="textField textField_floating">
+                            <input class="textField__input _req _email" type="email" id="email" name="email" placeholder="Email*" required="">
+                            <label class="textField__label" for="email">E-mail*</label>
+                            
+                        </div>
+                        <div class="containerMain_form_inputCheckbox">
+                            <h2>Как вы узнали о нашем магазине? (один или несколько вариантов)</h2>
+                            <div class="containerMain_form_inputField_floating">
+                                <div class="containerMain_form_checkboxColum">
+                                    <ul class="none">
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="Вывеска на улице" />
+                                            </label>
+                                            <p>Вывеска на улице</p>
+                                        </li>
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="Реклама на автомобиле" />
+                                            </label>
+                                            <p>Реклама на автомобиле</p>
+                                        </li>
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="От друзей/знакомых" />
+                                            </label>
+                                            <p>От друзей/знакомых</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="containerMain_form_checkboxColum">
+                                    <ul class="none">
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="Реклама в интернете" />
+                                            </label>
+                                            <p>Реклама в интернете</p>
+                                        </li>
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="Социальные сети" />
+                                            </label>
+                                            <p>Социальные сети</p>
+                                        </li>
+                                        <li class="checkmark">
+                                            <label for="form-control">
+                                                <input type="checkbox" name="checkbox[]" value="swimSchool" />
+                                            </label>
+                                            <p>Школа плавания</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="containerMain_form_inputCheckbox">
+                            <div class="containerMain_form_checkbox">
+                                <ul class="none">
+                                    <li class="checkmark">
+                                        <label for="form-control">
+                                            <input type="checkbox" name="checkbox[]" id="formAgreement" class="checkbox__input _req">
+                                        </label>
+                                        <p>Нажимая кнопку "Отправить", Вы подтверждаете свое согласие на обработку <a
+                                                href="" target="_blank">персональных данных</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerTextField_inputSubmit">
+                        <button type="submit">отправить</button>
+                    </div>
+                </div>
+            </form>  
+        </div> 
+    </div>
+</div>
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery.maskedinput.min.js"></script>
+<script src="/js/jquery.maskedinput.js"></script>
+<script src="/js/input_mtle.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
